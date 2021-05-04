@@ -1,18 +1,12 @@
-const arr1 = [
-  [1, 2], //arr1[0]
-  [2, 3], //arr1[1]
-];
+const x = 2;
 
-const arr2 = [
-  [3, 4], //arr2[0]
-  [5, 6], //arr2[1]
-];
+const n = 5;
 
-// index = 배열의 index번호를 의미하고
-// i = 배열안의 원소의 index번호를 의미한다.
-
-const solution = (arr1, arr2) => {
-  return arr1.map((item, index) => item.map((v, i) => v + arr2[index][i]));
+// new Array 로 배열을 하나만든다.(배열의 길이는 n) //  x로 채운다.
+//각각의 인덱스+1 * x(2)를 해준다.
+const solution = (x, n) => {
+  let arr = new Array(n).fill(x);
+  return arr.map((_, index) => (index + 1) * x);
 };
 
-console.log(solution(arr1, arr2));
+console.log(solution(x, n));

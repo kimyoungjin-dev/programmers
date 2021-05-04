@@ -4,8 +4,9 @@ const stages = [2, 1, 2, 6, 2, 4, 3, 3]; //8개
 
 function solution(N, stages) {
   let len = stages.length;
+  //[0,0,0,0,0]의 배열을 만든다.
   const eachStage = Array(N).fill(0);
-
+  //방금만든 배열에 stages의 원소의 갯수 더해서 넣는다.
   stages.forEach((v) => {
     if (N != v - 1) eachStage[v - 1]++;
   });
